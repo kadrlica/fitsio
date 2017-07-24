@@ -4306,7 +4306,8 @@ class FITSCard(FITSRecord):
             self._check_len()
 
             front=card_string[0:7]
-            if (not self.has_equals() or front=='COMMENT' or front=='HISTORY'):
+            if (not self.has_equals() or front=='COMMENT' or front=='HISTORY'
+                or front=='CONTINU'):
 
                 #if front=='CONTINU':
                 #    raise ValueError("CONTINUE not supported")
